@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prédiction de l'Indice MASI</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <style>
+        body {
+            background-image: url('https://geekflare.com/wp-content/uploads/2022/12/How-Data-Virtualization-is-done.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8); /* Ajoutez une opacité au conteneur pour rendre le texte lisible */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+        }
+
+        #logo {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        #footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://idatech.ma/accompagnement-decisionnel/" target="_blank">
+            <img id="logo" src="https://idatech.ma/wp-content/uploads/2021/04/Logo-Source-file.png" alt="Logo de la société">
+        </a>
+        <h1>Prédiction de l'Indice MASI</h1>
+        <h2>IDA TECH INTERNSHIP</h2>
+        <h3>BENEZZINE Issam</h3>
+        <form id="predictionForm">
+            <label for="seance">Date de la séance :</label>
+            <input type="text" id="seance" name="seance" required>
+            
+            <label for="cours_cloture">Cours Clôture :</label>
+            <input type="number" id="cours_cloture" name="cours_cloture" required>
+            
+            <label for="cours_ouverture">Cours Ouverture :</label>
+            <input type="number" id="cours_ouverture" name="cours_ouverture" required>
+            
+            <label for="volume_jj">Volume JJ :</label>
+            <input type="number" id="volume_jj" name="volume_jj" required>
+            
+            <label for="indice_monia">Indice MONIA :</label>
+            <input type="number" id="indice_monia" name="indice_monia" required>
+            
+            <label for="encours">Encours :</label>
+            <input type="number" id="encours" name="encours" required>
+            
+            <button type="button" onclick="submitForm()">Prédire</button>
+        </form>
+
+        <div id="result" class="hidden">
+            <h2>Résultat de la prédiction :</h2>
+            <p id="predictionResult"></p>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>&copy; 2023 IDA TECH. Tous droits réservés.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="static/scripts.js"></script>
+</body>
+</html>
